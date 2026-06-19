@@ -1,0 +1,23 @@
+@use './reset';
+@use '@angular/material' as mat;
+@use './theme-colors' as theme;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: theme.$primary-palette,
+      tertiary: theme.$tertiary-palette,
+    ),
+    tygraphy: Roboto,
+    density:0,
+  ));
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+html, body{height: 100%;}
+body{margin: 0; font-family: Roboto,"Helvetica Neue", sans-serif;}
